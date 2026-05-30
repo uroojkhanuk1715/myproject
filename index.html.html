@@ -3,38 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bano Qabil Page Clone</title>
+    <style>
+         /* Body & General Styles */
+        body {
+            margin: 0px;
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* Header Styles */
+        #Header {
+            background-color: rgba(170, 170, 170, 0.205);
+            height: 150px;
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            margin: 0px;
+        }
+        .logo {
+            width: 50;
+        }
+        ul {
+            display: inline-flex;
+        }
+        li {
+            padding: 10px 30px;
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            border-color: black;
+            border-radius: 10px;
+            margin: 20px;
+            text-color :black;
+        }
+
+        .menu {
+            width: 50%;
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            width: 20%;
+            color: rgb(6, 6, 7);
+            padding: 10px 30px;
+            font-size: 24px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .sub-btn {
+            color: aliceblue;
+            background-color: black;
+            padding: 10px 30px;
+            font-size: 24px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero-container {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.hero-img {
+    background-image: url(banner_1\ \(1\).jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Image ka ratio kharab nahi hone deta */
+    object-position: center;
+}
+
+        .hero-image img {
+            max-width: 100%;
+            filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.3));
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background-color: #111;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 25px 10%;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            color: #00a859;
+            font-size: 28px;
+        }
+
+        .stat-item p {
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* What We Offer Section */
+        .offers {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .offers h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .offers .subtitle {
+            color: #777;
+            margin-bottom: 50px;
+        }
+
+        .cards-grid {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            flex: 1;
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: #00a859;
+        }
+
+        .card-icon {
+            height: 150px;
+            background: #f0f0f0;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #999;
+        }
+
+        .card h3 {
+            color: #005a32;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero, .cards-grid, .stats-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-content p { margin: 20px auto; }
+            .hero-image img { width: 100%; margin-top: 40px; }
+            .stat-item { margin-bottom: 20px; }
+        }
+        /* --- CSS END --- */
+    </style>
 </head>
 <body>
-    <!DOCTYPE html>
-</head>
-<body>
-
-    <h1>Chicken Biryani Recipe</h1>
-
-    <img src="chicken-biryani.jpg" alt="Delicious Biryani"height="300" width="300">
-
-    <h3>Description</h3>
-    <p>
-        Chicken Biryani is a world-famous savory chicken and rice dish that includes layers of chicken, 
-        rice, and aromatics that are steamed together. The bottom layer of rice absorbs all the 
-        juices of the chicken as it cooks, giving it a tender texture and rich flavor, while the 
-        top layer of rice turns out white and fluffy.
-    </p>
-
-    <div class="ingredients-list">
-        <h3>Ingredients</h3>
-        <ul>
-            <li>500g Basmati Rice</li>
-            <li>700g Chicken (cut into pieces)</li>
-            <li>3 Large Onions (thinly sliced)</li>
-            <li>2 Tomatoes (chopped)</li>
-            <li>Ginger-Garlic Paste (2 tbsp)</li>
-            <li>Yogurt (1 cup)</li>
-            <li>Spices: Salt, Red Chili powder, Turmeric, Biryani Masala</li>
-            <li>Fresh Mint and Coriander leaves</li>
-        </ul>
+      <div id="Header">
+        <div class="logo">
+            <img src="header_logo.png" alt="Logo" width="100" height="100" style="margin-left: 20px;">        </div>
+            
+    
+        <div class="menu">
+            <ul style="list-style-type: none; display: flex;">
+                <li style="margin: 0 15px;"><a href="#">bano qabil</a></li>
+                <li style="margin: 0 15px;"><a href="#">Home</a></li>
+                <li style="margin: 0 15px;"><a href="#">About</a></li>
+                <li style="margin: 0 15px;"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="btn">
+            <button type="submit" class="sub-btn">Call Now</button>
+        </div>
     </div>
+
+    <section class="hero">
+        <div class="hero-container">
+
+            <div class="hero-image">
+                <img src="banner_1 (1).jpeg" alt="Hero Image">
+            </div>
+        </div>
+    </section>
+    <div class="stats-bar">
+        <div class="stat-item"><h3>75,000+</h3> <p>Students Trained</p></div>
+        <div class="stat-item"><h3>50+</h3> <p>Courses Offered</p></div>
+        <div class="stat-item"><h3>06</h3> <p>Active Cities</p></div>
+        <div class="stat-item"><h3>100k+</h3> <p>Registrations</p></div>
+    </div>
+</div>    
+
+    <section class="offers">
+        <h2>What We Offer</h2>
+        <p class="subtitle">Comprehensive solutions to transform you from a learner to a professional</p>
+        
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-icon">IT TRAINING</div>
+                <h3>Advanced IT Training</h3>
+                <p>Master the digital landscape with our industry aligned curriculum. We bridge the gap between theory and practice.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">INCUBATION</div>
+                <h3>Strategic Incubation Centre</h3>
+                <p>Transition from students to professionals through hands-on project execution and expert mentorship.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">JOB PORTAL</div>
+                <h3>Dedicated Job Portal</h3>
+                <p>Unlock your future career path. Secure jobs with leading companies and get professional coaching.</p>
+            </div>
+        </div>
+    </section>
 
 </body>
 </html>
